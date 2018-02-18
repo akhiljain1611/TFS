@@ -105,3 +105,49 @@
     
                 return workItemList;
             }
+            
+            
+            public class WorkItemViewModel
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string AssignedTo { get; set; }
+        public string WorkitemType { get; set; }
+        public string Priorty { get; set; }
+        public string IterationPath { get; set; }
+        public string State { get; set; }
+        public List<TFSIssue> Issues { get; set; }
+        public List<TFSTask> Tasks { get; set; }
+        public List<Backlogitem> PBacklog { get; set;}
+
+    }
+  public class TFSTask
+    {
+        public int ID { get; set; }
+        public string name { get; set; }
+      //  public string activity { get; set; }
+        public string status { get; set; }
+      //  public DateTime? start { get; set; }
+      //  public DateTime? due { get; set; }
+        public string IterationPath { get; set; }
+        public string Assignedto { get; set; }
+        public int priorty { get; set; }
+        public int effort { get; set; }
+        public int Completed { get; set; }
+    }
+
+public class TFSIssue
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public DateTime? Created { get; set; }
+
+        public string State { get; set; }
+        public DateTime? due { get; set; }
+        public string IterationPath { get; set; }
+        public string Assignedto { get; set; }
+        public int priorty { get; set; }
+        public int effort { get; set; }
+        public int Completed { get; set; }
+    }
+
